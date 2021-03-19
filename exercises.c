@@ -82,10 +82,10 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-  Vector * largo = (Vector *)calloc(n,sizeof(Vector));
+  Vector * largo = (Vector *)malloc(sizeof(Vector) * n);
   int i;
   for(i = 0; i < n; i++){
-    largo[i].datos = (int *) malloc (sizeof(int) * n);
+    largo[i].datos = (int *) calloc (n,sizeof(int));
     largo[i].capacidad = n;
   }
    return largo;
@@ -106,7 +106,8 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+
+  return 0;
 }
 
 /*
